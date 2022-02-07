@@ -12,7 +12,7 @@ Add it to your package's pubspec.yaml file
 
 ```yml
 dependencies:
-  circle_progress_bar: ^0.1.0
+  circle_progress_bar: ^0.1.1
 ```
 
 

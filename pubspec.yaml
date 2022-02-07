@@ -1,10 +1,10 @@
 name: circle_progress_bar
 description: An animated progress bar with text inside and customizable style (color, stroke width, ...)
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/timobaehr/circle_progress_bar
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:
