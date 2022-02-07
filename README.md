@@ -59,8 +59,9 @@ class _MyAppState extends State<MyApp> {
 
 ## Apps using this plugin
 
-![EHW+](https://play-lh.googleusercontent.com/TDPCEwTmGEootK5VnPLu94AZ4Ks4-eTa_sg9IoLqWOk_aBr-OxjkfKe2s0OkvLgWKNc_=w220-rw)
-[EHW+](https://ehwplus.web.app)
+|---|---|
+| ![EHW+](https://play-lh.googleusercontent.com/TDPCEwTmGEootK5VnPLu94AZ4Ks4-eTa_sg9IoLqWOk_aBr-OxjkfKe2s0OkvLgWKNc_=w220-rw)|   |
+| [EHW+](https://ehwplus.web.app) app for iOS/Android | Here could be your app |
 
 ## Getting Started
 
