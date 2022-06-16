@@ -1,6 +1,6 @@
 name: circle_progress_bar
 description: An animated progress bar with text inside and customizable style (color, stroke width, ...)
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/timobaehr/circle_progress_bar
 
 environment:

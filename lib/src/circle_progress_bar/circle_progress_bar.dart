@@ -11,12 +11,14 @@ class CircleProgressBar extends StatefulWidget {
     this.reversedDirection = false,
     required this.foregroundColor,
     required this.value,
+    this.strokeWidth,
   }) : super(key: key);
 
   final Duration? animationDuration;
   final Color? backgroundColor;
   final Color foregroundColor;
   final bool reversedDirection;
+  final double? strokeWidth;
 
   /// double value between 0.0 and 1.0
   final double value;
@@ -127,6 +129,7 @@ class CircleProgressBarState extends State<CircleProgressBar>
               foregroundColor: foregroundColor,
               reversedDirection: widget.reversedDirection,
               percentage: valueTween!.evaluate(curve),
+              strokeWidth: widget.strokeWidth ?? 6,
             ),
             child: child,
           );
@@ -143,8 +146,8 @@ class CircleProgressBarPainter extends CustomPainter {
     required this.foregroundColor,
     required this.percentage,
     this.reversedDirection = false,
-    double? strokeWidth,
-  }) : strokeWidth = strokeWidth ?? 6;
+    required this.strokeWidth,
+  });
 
   /// The progress as double value between 0.0 and 1.0
   final double percentage;
