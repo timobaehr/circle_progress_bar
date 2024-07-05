@@ -14,6 +14,7 @@ class DoubleValueTextWithCircle extends StatelessWidget {
     this.subtitle,
     this.reversedDirection = false,
     this.icon,
+    this.unitTextScaler,
   })  : _progress = consumption / maxValue,
         super(key: key);
 
@@ -31,6 +32,10 @@ class DoubleValueTextWithCircle extends StatelessWidget {
   final bool reversedDirection;
   final Color foregroundColor;
   final Color backgroundColor;
+
+  /// The scale factor used for [unit] only.
+  /// Example: TextScaler.linear(1.1)
+  final TextScaler? unitTextScaler;
 
   final double _progress;
 
@@ -60,7 +65,7 @@ class DoubleValueTextWithCircle extends StatelessWidget {
             duration: const Duration(milliseconds: 500),
             //unit: unit,
             style: const TextStyle(),
-            unitScaleFactor: 0.8,
+            unitTextScaler: unitTextScaler ?? const TextScaler.linear(0.8),
           )
         else
           const Text(

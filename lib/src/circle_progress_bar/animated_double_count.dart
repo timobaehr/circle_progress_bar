@@ -9,7 +9,7 @@ class AnimatedCount extends StatefulWidget {
       required this.unit,
       required this.duration,
       this.style,
-      this.unitScaleFactor,
+      this.unitTextScaler,
       this.curve = Curves.linear})
       : super(key: key);
 
@@ -25,8 +25,9 @@ class AnimatedCount extends StatefulWidget {
   /// The style used for [count] and [unit]
   final TextStyle? style;
 
-  /// The scale factor used for [unit] only
-  final double? unitScaleFactor;
+  /// The scale factor used for [unit] only.
+  /// Example: TextScaler.linear(1.1)
+  final TextScaler? unitTextScaler;
 
   /// Duration of the animation
   final Duration duration;
@@ -83,7 +84,7 @@ class _AnimatedCountState extends State<AnimatedCount>
               Text(
                 widget.unit!,
                 style: widget.style,
-                textScaleFactor: widget.unitScaleFactor,
+                textScaler: widget.unitTextScaler,
               )
           ],
         );
