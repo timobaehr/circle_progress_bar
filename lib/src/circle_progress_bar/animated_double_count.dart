@@ -72,6 +72,8 @@ class _AnimatedCountState extends State<AnimatedCount>
       builder: (BuildContext context, Widget? child) {
         return Row(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: widget.unit != null ? MainAxisAlignment.start : MainAxisAlignment.center,
+          crossAxisAlignment: widget.unit != null ? CrossAxisAlignment.start : CrossAxisAlignment.center,
           children: [
             Text(
               _animation.value
