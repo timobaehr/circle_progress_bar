@@ -22,37 +22,72 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Example app circular progress bar'),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text('Animated text without circle:'),
-            const AnimatedCount(
-              count: 90,
-              unit: '%',
-              duration: Duration(milliseconds: 500),
-            ),
-            const SizedBox(height: 30),
-            const Text('Circle progress bar:'),
-            SizedBox(
-              width: 250,
-              child: CircleProgressBar(
-                foregroundColor: Colors.blue,
-                backgroundColor: Colors.black12,
-                value: 0.5,
-                child: _dragonCircle(),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text('Animated text without circle:'),
+              const AnimatedCount(
+                count: 90,
+                unit: '%',
+                duration: Duration(milliseconds: 500),
               ),
-            ),
-            const SizedBox(height: 30),
-            const Text('Complex example:'),
-            const DoubleValueTextWithCircle(
-              consumption: 4.5,
-              currency: '€',
-              priceInCents: 4.5 * 27,
-              foregroundColor: Colors.green,
-              maxValue: 6,
-              unit: Unit.kWh,
-            ),
-          ],
+              const SizedBox(height: 30),
+              const Text('Circle progress bar:'),
+              const SizedBox(height: 12),
+              SizedBox(
+                width: 250,
+                child: CircleProgressBar(
+                  foregroundColor: Colors.blue,
+                  backgroundColor: Colors.black12,
+                  value: 0.5,
+                  child: _dragonCircle(),
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Text('Complex example:'),
+              const SizedBox(height: 12),
+              const DoubleValueTextWithCircle(
+                consumption: 4.5,
+                currency: '€',
+                priceInCents: 4.5 * 27,
+                foregroundColor: Colors.green,
+                maxValue: 6,
+                unit: Unit.kWh,
+              ),
+              const SizedBox(height: 30),
+              const Text('Overflow example:'),
+              const SizedBox(height: 12),
+              const Wrap(
+                runSpacing: 24,
+                spacing: 24,
+                children: [
+                  SizedBox(
+                    width: 32*2,
+                    child: CircleProgressBar(
+                      foregroundColor: Colors.blue,
+                      backgroundColor: Colors.black12,
+                      value: 0.77,
+                      child: Center(
+                        child: Text('This is a very very very long long text'),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 32*3,
+                    child: CircleProgressBar(
+                      foregroundColor: Colors.blue,
+                      backgroundColor: Colors.black12,
+                      value: 0.77,
+                      child: Center(
+                        child: Text('This is a very very very long long text'),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

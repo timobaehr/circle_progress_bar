@@ -124,7 +124,7 @@ class CircleProgressBarState extends State<CircleProgressBar>
               foregroundColorTween?.evaluate(curve) ?? widget.foregroundColor;
 
           return CustomPaint(
-            foregroundPainter: CircleProgressBarPainter(
+            painter: CircleProgressBarPainter(
               backgroundColor: backgroundColor,
               foregroundColor: foregroundColor,
               reversedDirection: widget.reversedDirection,

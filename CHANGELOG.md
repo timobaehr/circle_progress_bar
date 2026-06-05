@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Overflow content should be rendered on top of the circle
+
 ## 0.1.3
 
 * Fix linter warnings with TextScaler
